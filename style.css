@@ -16,9 +16,14 @@
 	min-height: 80vh;
 	margin: auto;
 	width: 100%;
+	padding: 20px;
 }
 
-
+	@keyframes anima{
+		0%{background-position: 5% 0%;}
+		50%{background-position: 96% 100%;}
+		100%{background-position: 5% 0%;}
+}
 
 .uno{
 	grid-area: uno;
@@ -35,13 +40,22 @@
 
 .tres{
 	grid-area: tres;
-	background-image: url('assets/mar.jpg');
 	background-size: cover;
 	background-position: center;
 }
 
+
 .uno, .dos, .tres{
 	padding: 1.8rem;
+	transition: all 200ms ease-in-out;
+	background: linear-gradient(135deg,  #7db9e8 0%,#ea542e 25%,#207cca 49%,#2989d8 50%,#f74831 59%,#ef2fdf 71%,#2fdaed 82%,#1e5799 92%);
+	animation: anima 42s linear infinite;
+	background-size: 1000% 1000%;
+}
+
+
+.scale:hover{
+	transform: scale(1.1);
 }
 
 .bgColorGrey{
